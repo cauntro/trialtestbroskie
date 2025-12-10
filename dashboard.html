@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <style>
+    body {
+      background:#000;
+      color:white;
+      font-family:Arial;
+      margin:0;
+    }
+
+    header {
+      background:#111;
+      padding:20px;
+      text-align:center;
+      font-size:22px;
+    }
+
+    .container {
+      padding:20px;
+    }
+
+    .card {
+      background:#111;
+      margin:15px 0;
+      padding:20px;
+      border-radius:15px;
+    }
+
+    .glow {
+      color:#FFD700;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  Welcome, <span id="username" class="glow"></span> 🎉
+</header>
+
+<div class="container">
+  <div class="card">🔥 Trending Music Clips</div>
+  <div class="card">🎵 Your Playlist</div>
+  <div class="card">💬 Fan Chat Coming Soon</div>
+</div>
+
+<script>
+document.getElementById("username").textContent =
+  localStorage.getItem("username") || "Guest";
+</script>
+
+</body>
+</html>
